@@ -1,0 +1,21 @@
+{
+    "schemaVersion": "1.0.0",
+    "async": true,
+    "class": "Device",
+    "Common": {
+        "class": "Tenant",
+        "hostname": "bigip.lab.local",
+        "myLicense": {
+            "class": "License",
+            "licenseType": "licensePool",
+            "bigIqHost": "bigiq.lab.local",
+            "bigIqUsername": "admin",
+            "bigIqPassword": "putPasswordHere",
+            "licensePool": "best-25m",
+            "reachable": true,
+            "revokeFrom": "",
+            "bigIpUsername": "admin",
+            "bigIpPassword": "putPasswordHere"
+        }
+    }
+}

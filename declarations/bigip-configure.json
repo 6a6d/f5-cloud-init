@@ -1,0 +1,55 @@
+{
+    "schemaVersion": "1.0.0",
+    "async": true,
+    "class": "Device",
+    "Common": {
+        "class": "Tenant",
+        "hostname": "bigip.lab.local",
+        "myDns": {
+            "class": "DNS",
+            "nameServers": [
+                "8.8.8.8"
+            ],
+            "search": [
+                "lab.local"
+            ]
+        },
+        "myNtp": {
+            "class": "NTP",
+            "servers": [
+                "0.north-america.pool.ntp.org"
+            ],
+            "timezone": "UTC"
+        },
+        "myProvisioning": {
+            "class": "Provision",
+            "ltm": "nominal"
+        },
+        "internal": {
+            "class": "VLAN",
+            "tag": 4093,
+            "mtu": 1500,
+            "interfaces": [
+                {
+                    "name": "1.2",
+                    "tagged": false
+                }
+            ]
+        },
+        "internal-self": {
+            "class": "SelfIp",
+            "address": "10.1.2.20/24",
+            "vlan": "internal",
+            "allowService": "default",
+            "trafficGroup": "traffic-group-local-only"
+        },
+        "myDbVariables": {
+            "class": "DbVariables",
+            "ui.advisory.enabled": "true",
+            "ui.advisory.color": "red",
+            "ui.advisory.text": "/Common/hostname",
+            "provision.extramb": 1000,
+            "restjavad.useextramb": true
+        }
+    }
+}
